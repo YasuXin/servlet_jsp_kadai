@@ -16,9 +16,9 @@ public class LinkServlet extends HttpServlet {
 		response.setContentType("text/html; charset=UTF-8");
 		
 		String name = request.getParameter("name");
-		request.setAttribute("name", name);
+		request.setAttribute("message", "Servletからデータを受信しました:" + name + "さん、こんにちは！");
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
-		dispatcher.include(request, response);
+		dispatcher.forward(request, response);
 	
 	}
 }

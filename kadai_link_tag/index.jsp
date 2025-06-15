@@ -8,7 +8,7 @@
 </head>
 <body>
 <%
-	String name = (String) request.getAttribute("name");
+	String message = (String) request.getAttribute("message");
 %>
 	<p>
 		<a href="<%= request.getContextPath() %>/index?name=侍太郎">
@@ -16,8 +16,8 @@
 		</a>
 	</p>
 	<p><% 
-	if(name!=null) {
-		out.println("Servletからデータを受信しました:" + name + "さん、こんにちは！");	
+	if(message!=null) {
+		out.println(message);	
 	}
 	%></p>
 	
